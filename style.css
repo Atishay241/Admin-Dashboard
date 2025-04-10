@@ -1,7 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+    font-family: 'special_gothic_condensed_onRg';
+    src: url('../fonts/pecialgothiccondensedone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/specialgothiccondensedone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 :root {
     /* Primary Colors */
@@ -36,12 +45,13 @@ img {
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1.3fr 4.5fr;
+    grid-template-columns: 1.7fr 4.5fr 1.9fr;
+    
 }
 
 .header {
     height: 150px;
-    grid-area: 1/2/1/3;
+    grid-area: 1/2/1/4;
     display: grid;
     grid-template: repeat(2, 1fr) / 2fr 1fr;
     padding: 5px 20px;
@@ -106,7 +116,7 @@ img {
 
 
 .sidebar {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-blue-dark);
     grid-area: 1/1/4/2;
     display: grid;
     grid-template-rows: 70px 350px 1fr;
@@ -118,6 +128,7 @@ img {
 
 .sidebar  svg {
     height: 40px;
+    color: white;
 }
 
 li {
@@ -129,7 +140,7 @@ li {
 
 .feature-tabs > li , .user-tabs > li{
     display: flex;
-   
+    font-size: 18px;
     align-items: center;
     margin: 10px 0px;
 }
@@ -138,4 +149,64 @@ li {
     display: flex;
     align-items: center;
     
+}
+
+.article {
+    grid-area: 2/2/4/3;
+    padding: 20px;
+    background-color: var(--accent-light-gray);
+}
+
+.project svg {
+    height: 25px;
+}
+
+.project-hero {
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.project-boxes {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 30px;
+}
+.project {
+    padding: 12px;
+    background-color: var(--accent-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-dark);
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: -7px 0 0 var(--accent-yellow) , 7px 7px 5px var(--accent-dark-gray);
+}
+
+.project-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ .latingo {
+    color: var(--text-medium);
+}
+
+.box-options{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+}
+
+.box-options > * {
+    border: none;
+}
+
+
+
+.sideprofile{
+    grid-area: 2/3/4/4;
+    background-color: var(--accent-light-gray);
 }
