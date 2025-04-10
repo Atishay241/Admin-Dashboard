@@ -54,7 +54,7 @@ img {
     grid-area: 1/2/1/4;
     display: grid;
     grid-template: repeat(2, 1fr) / 2fr 1fr;
-    padding: 5px 20px;
+    padding: 12px 20px;
     gap: 5px;
 }
 .searchicon, .bellicon {
@@ -209,4 +209,48 @@ li {
 .sideprofile{
     grid-area: 2/3/4/4;
     background-color: var(--accent-light-gray);
+    display: grid;
+    row-gap: 40px;
+    padding: 20px;
+}
+
+.profiles > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.annc , .trend  {
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+body > div > div.sideprofile > div.announcements > div , body > div > div.sideprofile > div.trending > div {
+    padding: 12px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-dark);
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid var(--black);
+    box-shadow: none;
+}
+
+.announcements .project-name {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.announcements .latingo {
+    color: var(--text-medium);
+    font-size: 14px;
+}
+
+.profiles {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 7px;
 }
